@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Component_3_1" width="336.739" height="562.207" viewBox="0 0 336.739 562.207">
+    <defs>
+        <clipPath id="clip-path">
+            <path d="M31 41H367.739V603.207H31z" class="cls-1"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <path d="M33 39H651.739V862.207H33z" class="cls-1"/>
+        </clipPath>
+        <linearGradient id="linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#7f28d5"/>
+            <stop offset="1" stop-color="#ab176b" stop-opacity=".588"/>
+        </linearGradient>
+        <filter id="Polygon_1" width="637.319" height="759.787" x="-54.79" y="-70.79" filterUnits="userSpaceOnUse">
+            <feOffset dx="-48" dy="-14"/>
+            <feGaussianBlur result="blur" stdDeviation="16.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-1{fill:none}
+        </style>
+    </defs>
+    <g id="Scroll_Group_3" transform="translate(-31 -41)" style="isolation:isolate" clip-path="url(#clip-path)">
+        <g id="Component_2_1">
+            <g id="Scroll_Group_1" transform="translate(-33 -39)" style="isolation:isolate" clip-path="url(#clip-path-2)">
+                <g filter="url(#Polygon_1)" transform="translate(64 80)">
+                    <path id="Polygon_1-2" fill="url(#linear-gradient)" d="M276.012 24.013a20 20 0 0 1 32.975 0l254.508 370.666A20 20 0 0 1 547.007 426H37.993a20 20 0 0 1-16.488-31.321z" transform="rotate(77.9 233.556 280.5)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
