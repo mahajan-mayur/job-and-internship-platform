@@ -31,7 +31,7 @@
                     <div class="box ">
 
                         <form method="post" action="login.php">
-                        <?php include('errors.php') ?>
+                       
                             <span class="Login ">
                                 <h1>LOGIN</h1>
                             </span>
@@ -47,9 +47,9 @@
                                 </label>
                             </div>
                             <div class="inputbox">
-                                <input class="field" type="text" placeholder="USERNAME" name="username">
-                                <input class="field" type="text" placeholder="PASSWORD" name="password"><br>
-                                <button type="submit" name="login_btn" class="btn btn-dark">LOG IN</button>
+                                <input class="field" type="text" placeholder="USERNAME" name="username" required>
+                                <input class="field" type="password" placeholder="PASSWORD" name="password_1" required><br>
+                                <button type="submit" name="login_usr" class="btn btn-dark">LOG IN</button>
                             </div>
                         </form>
                     </div>

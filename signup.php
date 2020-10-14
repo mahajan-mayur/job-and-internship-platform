@@ -44,13 +44,13 @@
                        
                         </select>
 
-                        <input class="field "  type="text" name ="username" placeholder="USERNAME" ><br>
+                        <input class="field "  type="text"  name ="username" placeholder="USERNAME" required><br>
 
-                        <input class="field" type="text" name ="email" placeholder="EMAIL" style="width: 100%;"><br>
+                        <input class="field" type="text" name ="email" placeholder="EMAIL" required style="width: 100%;"><br>
 
-                        <input class="field" type="password" name ="password_1" placeholder="PASSWORD" style="width: 100%;"><br>
+                        <input class="field" type="password" name ="password_1" placeholder="PASSWORD" required style="width: 100%;"><br>
 
-                        <input class="field" type="password" name ="password_2" placeholder="REPEAT YOUR PASSWORD" style="width: 100%;"><br>
+                        <input class="field" type="password" name ="password_2" placeholder="REPEAT YOUR PASSWORD" required style="width: 100%;"><br>
 
                         <button  class="btn btn-dark" type="submit"  name="reg_user">CREATE ACCOUNT</button>
                         
