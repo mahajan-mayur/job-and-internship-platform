@@ -37,13 +37,13 @@
                             </span>
                             <div class="rad">
                                 <label class="radio-inline">
-                                    <input type="radio" name="optradio" checked>Student
+                                    <input type="radio" value="student" name="optradio" checked>Student
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="optradio">Company
+                                    <input type="radio" value="company" name="optradio">Company
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="optradio">Admin
+                                    <input type="radio" value="admin" name="optradio">Admin
                                 </label>
                             </div>
                             <div class="inputbox">

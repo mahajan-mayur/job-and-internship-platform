@@ -75,6 +75,10 @@ if(count($errors)==0){
         $password = mysqli_real_escape_string($db, $_POST['password_1']);
     
         // make sure form is filled properly
+
+       
+        $radioVal = mysqli_real_escape_string($db, $_POST["optradio"]);
+        
         if (empty($username)) {
             array_push($errors, "Username is required");
         }
@@ -92,20 +96,54 @@ if(count($errors)==0){
             if (mysqli_num_rows($results) ) { // user found
                 // check if user is admin or user
                 $logged_in_user = mysqli_fetch_assoc($results);
-                if ($logged_in_user['user_type'] == 'admin') {
+
+                
+
+                if($radioVal == "admin"){
+                    if ($logged_in_user['user_type'] == 'admin') {
     
-                    $_SESSION['user'] = $logged_in_user;
-                    $_SESSION['success']  = "You are now logged in";
-                    header('location: admin/home.php');		  
-                }else{
-                    $_SESSION['user'] = $logged_in_user;
-                    $_SESSION['success']  = "You are now logged in";
-    
-                    header('location: index.php');
+                        $_SESSION['user'] = $logged_in_user;
+                        $_SESSION['success']  = "You are now logged in";
+                        header('location: admin/home.php');	
                 }
-            }else {
+                else{
+                    echo '<script>alert("Wrong user type selected")</script>';
+                } 
+            }
+                	
+        else if ($radioVal == "student"){
+            if ($logged_in_user['user_type'] == 'student'){
+
+                $_SESSION['user'] = $logged_in_user;
+                $_SESSION['success']  = "You are now logged in";
+    
+                header('location: index.php');
+    
+            }
+            else{
+                echo '<script>alert("Wrong user type selected")</script>';
+            }   
+            }
+            else if ($radioVal == "company"){
+                if ($logged_in_user['user_type'] == 'company'){
+
+                    $_SESSION['user'] = $logged_in_user;
+                    $_SESSION['success']  = "You are now logged in";
+        
+                    header('location: company.php');
+        
+                } 
+                else{
+                    echo '<script>alert("Wrong user type selected")</script>';
+                } 
+            }
+
+            
+                
+            else {
                 array_push($errors, "Wrong username/password combination");
             }
+        }
         }
     }
    ?>
