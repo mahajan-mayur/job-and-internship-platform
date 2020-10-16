@@ -37,10 +37,11 @@
                         <h1>SIGN UP</h1>
                     </span>
                     <div class="inputbox">
-                        <select class="field menu" >
-                            <option value="n" disabled selected hidden>SELECT USER TYPE</option>
-                            <option class="stud" value="STUDENT">STUDENT</option>
-                            <option value="COMPANY">COMPANY</option>
+                        <select class="field menu" name="user_type" required>
+                        <option value="" disabled selected hidden>SELECT USER TYPE</option>
+                            <!-- <option value="n" ></option> -->
+                            <option  value="student">STUDENT</option>
+                            <option value="company">COMPANY</option>
                        
                         </select>
 
