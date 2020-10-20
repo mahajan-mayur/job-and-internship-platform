@@ -47,7 +47,7 @@
 
                         <input class="field "  type="text"  name ="username" placeholder="USERNAME" required><br>
 
-                        <input class="field" type="text" name ="email" placeholder="EMAIL" required style="width: 100%;"><br>
+                        <input class="field" type="email" name ="email" placeholder="EMAIL" required style="width: 100%;"><br>
 
                         <input class="field" type="password" name ="password_1" placeholder="PASSWORD" required style="width: 100%;"><br>
 

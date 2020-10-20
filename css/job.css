@@ -1,0 +1,26 @@
+*{
+  
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+
+}
+body{
+
+   
+    padding-top: 20px;
+background-image:url("../img/black.jpeg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+.header{
+    color: white;
+    align-self: center;
+    padding: 50px;
+margin: auto;
+    text-align: center;
+}
