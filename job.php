@@ -20,6 +20,7 @@ if (isset($_GET['logout'])) {
 $errors = array();
     $msg = "";
 if(isset($_POST['add_job'])){
+
     $username = $_SESSION['username'];
     $job_tittle = mysqli_real_escape_string($db, $_POST['job_tittle']);
     $cat = mysqli_real_escape_string($db, $_POST['cat']);
@@ -30,16 +31,16 @@ if(isset($_POST['add_job'])){
     $apply = mysqli_real_escape_string($db, $_POST['apply']);
 
 
-    if (count($errors) == 0) {
+
 
       
-        $que = "INSERT INTO company (username, job_tittle, cat, pos, sal, dtd, abt , apply) VALUES ('$username', '$job_tittle', '$cat','$pos','$sal','$dtd' $abt' '$apply')";
+        $que = "INSERT INTO company (username,job_tittle,cat,pos,sal,dtd,abt,apply) VALUES ('$username','$job_tittle','$cat','$pos','$sal','$dtd','$abt','$apply')";
 
         mysqli_query($db, $que);
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = "You are now logged in";
-        header('location: index.php');
-    }
+
+        echo '<script>alert("data added sucessfully")</script>';
+        
+
 }
 
 ?>
@@ -115,12 +116,13 @@ if(isset($_POST['add_job'])){
                 <?php include('errors.php') ?>
                     <div class="form-group row">
                         <label for="jobName">JOB TITTLE</label>
-                        <input type="text" class="form-control" name="job_tittle" placeholder="eg: web development in react ">
+                        <input type="text" class="form-control" name="job_tittle" placeholder="eg: web development in react " required>
                     </div>
 
                     <div class="form-group row">
-                        <label for="category ml-5" style="padding: 5px;">Category &nbsp;</label>
+                        <label for="category ml-5" style="padding: 5px;"required>Category &nbsp;</label>
                         <select class="form-control col-sm-5" name="cat">
+                        <option value="" disabled selected hidden>SELECT USER TYPE</option>
                             <option value="web developer">WEB DEVELOPER</option>
                             <option value="java developer">JAVA DEVELOPER</option>
                             <option value="android developer">ANDROID DEVELOPER</option>
@@ -129,46 +131,44 @@ if(isset($_POST['add_job'])){
                         </select>
 
                         <label for="pos" style="padding: 5px; ">No. of position</label>
-                        <input type="number" class="form-control col-sm-2" placeholder="25" name="pos">
+                        <input type="number" class="form-control col-sm-2" placeholder="25" name="pos"required>
                     </div>
 
 
                     <div class="form-group row ">
                         <label for="sal " style="padding: 5px; padding-right:6%;">Salary </label>
-                        <input type="number" class="form-control col-sm-3" name="sal" placeholder="salary">
+                        <input type="number" class="form-control col-sm-3" name="sal" placeholder="salary" required>
 
                         <label for="dtd " style="padding: 5px;"> Start Date </label>
-                        <input type="date" class="form-control col-sm-4" name="dtd"></div>
+                        <input type="date" class="form-control col-sm-4" name="dtd" required></div>
 
                     <div class="form-group row">
                         <label for="abt">About the Job</label>
-                        <textarea class="form-control" name="abt" rows="2"></textarea>
+                        <textarea class="form-control" name="abt" rows="2" required></textarea>
                     </div>
 
                     <div class="form-group row">
                         <label for="apply">Who can apply</label>
-                        <textarea class="form-control" name="apply" rows="2"></textarea>
+                        <textarea class="form-control" name="apply" rows="2" required></textarea>
                     </div>
 
-                    <button type="submit" name="add_job" class="btn btn-success col-sm-3">ADD JOB</button>
+                    <button type="submit"  name="add_job" class="btn btn-success col-sm-3">ADD JOB</button>
 
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- notification message -->
-    <?php if (isset($_SESSION['success'])) : ?>
-        <div class="error success">
-            <h3>
-                <?php
-                echo $_SESSION['success'];
-                unset($_SESSION['success']);
-                ?>
+
             </h3>
         </div>
-    <?php endif ?>
+
 
 </body>
+<script>
+function myFunction() {
+  alert("added sucessfully");
+}
+</script>
 
 </html>

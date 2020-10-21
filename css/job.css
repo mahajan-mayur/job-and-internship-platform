@@ -24,3 +24,8 @@ background-repeat: no-repeat;
 margin: auto;
     text-align: center;
 }
+
+input,textarea {
+ 
+  color:black !important;
+}
