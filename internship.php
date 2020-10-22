@@ -19,7 +19,7 @@ if (isset($_GET['logout'])) {
 
 $errors = array();
     $msg = "";
-if(isset($_POST['add_job'])){
+if(isset($_POST['add_internship'])){
 
     $username = $_SESSION['username'];
     $job_tittle = mysqli_real_escape_string($db, $_POST['job_tittle']);
@@ -34,9 +34,9 @@ if(isset($_POST['add_job'])){
 
 
       
-        $que = "INSERT INTO company (username,job_tittle,cat,pos,sal,dtd,abt,apply) VALUES ('$username','$job_tittle','$cat','$pos','$sal','$dtd','$abt','$apply')";
+        $iop = "INSERT INTO internship (username,job_tittle,cat,pos,sal,dtd,abt,apply) VALUES ('$username','$job_tittle','$cat','$pos','$sal','$dtd','$abt','$apply')";
 
-        mysqli_query($db, $que);
+        mysqli_query($db, $iop);
 
         echo '<script>alert("data added sucessfully")</script>';
         
@@ -50,7 +50,7 @@ if(isset($_POST['add_job'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADD JOB</title>
+    <title>ADD INTERNSHIP</title>
     <link rel="stylesheet" href="css/job.css">
     <!-- bootstrap css 4.5.3 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -59,8 +59,8 @@ if(isset($_POST['add_job'])){
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -112,11 +112,11 @@ if(isset($_POST['add_job'])){
 
             <div class="header col-sm-6">
 
-                <h1>ADD JOBS</h1>
-                <form action="job.php" method="post">
+                <h1>ADD INTERNSHIP</h1>
+                <form action="internship.php" method="post">
                 <?php include('errors.php') ?>
                     <div class="form-group row">
-                        <label for="jobName">Job Tittle</label>
+                        <label for="jobName">Internship Tittle</label>
                         <input type="text" class="form-control" name="job_tittle" placeholder="eg: web development in react " required>
                     </div>
 
@@ -137,14 +137,14 @@ if(isset($_POST['add_job'])){
 
 
                     <div class="form-group row ">
-                        <label for="sal " style="padding: 5px; padding-right:6%;">Salary </label>
+                        <label for="sal " style="padding: 5px; padding-right:6%;">Stipned </label>
                         <input type="number" class="form-control col-sm-3" name="sal" placeholder="salary" required>
 
                         <label for="dtd " style="padding: 5px;"> Start Date </label>
                         <input type="date" class="form-control col-sm-4" name="dtd" required></div>
 
                     <div class="form-group row">
-                        <label for="abt">About the Job</label>
+                        <label for="abt">About internship</label>
                         <textarea class="form-control" name="abt" rows="2" required></textarea>
                     </div>
 
@@ -153,7 +153,7 @@ if(isset($_POST['add_job'])){
                         <textarea class="form-control" name="apply" rows="2" required></textarea>
                     </div>
 
-                    <button type="submit"  name="add_job" class="btn btn-success col-sm-3">ADD JOB</button>
+                    <button type="submit"  name="add_internship" class="btn btn-success col-sm-3">ADD internship</button>
 
                 </form>
             </div>
@@ -161,15 +161,11 @@ if(isset($_POST['add_job'])){
     </div>
 
 
-            </h3>
-        </div>
+
+
 
 
 </body>
-<script>
-function myFunction() {
-  alert("added sucessfully");
-}
-</script>
+
 
 </html>
