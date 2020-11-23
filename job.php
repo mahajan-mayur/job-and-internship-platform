@@ -66,46 +66,46 @@ if(isset($_POST['add_job'])){
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark   fixed-top" style="background-color: #200e38;">
+<nav class="navbar navbar-expand-lg navbar-dark   fixed-top" style="background-color: #200e38;">
 
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="nav-right"></div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav navbar-nav ">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item  ">
-                    <a class="nav-link" href="#">Application</a>
-                </li>
+<a class="navbar-brand" href="#">Company Portal</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="nav-right"></div>
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="nav navbar-nav ">
+    <li class="nav-item active">
+      <a class="nav-link" href="company.php">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item  ">
+      <a class="nav-link" href="applications.php">Application</a>
+    </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Add
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="job.php">ADD JOB</a>
-                        <a class="dropdown-item" href="internship.php">ADD INTERNSHIP</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="del.php">DELETE</a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item ">
-                    <a class="nav-link " href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp <strong><?= $_SESSION['username']; ?></strong></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link glyphicon glyphicon-user" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> LOGOUT</a>
-                </li>
-            </ul>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Add
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="job.php">ADD JOB</a>
+      <a class="dropdown-item" href="internship.php">ADD INTERNSHIP</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="del.php">DELETE</a>
+    </div>
+  </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item ">
+      <a class="nav-link " href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp <strong><?=$_SESSION['username']; ?></strong></a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link glyphicon glyphicon-user" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> LOGOUT</a>
+    </li>
+  </ul>
 
-        </div>
-    </nav>
-
+</div>
+</nav>
 
     <div class="container">
         <div class="row ">

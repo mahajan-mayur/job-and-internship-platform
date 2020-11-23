@@ -54,7 +54,7 @@ if (isset($_GET['logout'])) {
 
   <nav class="navbar navbar-expand-lg navbar-dark   fixed-top" style="background-color: #200e38;">
 
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Company Portal</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -63,10 +63,10 @@ if (isset($_GET['logout'])) {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav navbar-nav ">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="company.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item  ">
-          <a class="nav-link" href="#">Application</a>
+          <a class="nav-link" href="applications.php">Application</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -104,14 +104,14 @@ if (isset($_GET['logout'])) {
         </div>
         <div class="neon mb-2  col-sm-2" style="background-color: black">
   <h1 class="fo">
-    <strong><span class="first">A</span>pplications</strong>
+    <strong><a href="applications.php "><span class="first" >A</span>pplications</a></strong>
   </h1>
 
     </div>
   </div>
    
   </div>
-  </div>
+
   
 <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item mb-5" data-ride="carousel">

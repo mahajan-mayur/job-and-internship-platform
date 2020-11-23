@@ -88,7 +88,7 @@ function do_login()
                     return;
                 }
                  if($userType == "student"){
-                    header("location: student.php");
+                    header("location: home.php");
                     return;
                 }
              if ($userType == "company"){
@@ -134,6 +134,7 @@ function do_login()
 </head>
 
 <body>
+    
 
 
 <div class="container">
